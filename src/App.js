@@ -3,7 +3,6 @@ import React from 'react'
 import Header from './components/Header/Header'
 import Home from './components/Home/Home.js'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Login from './components/Login/Login'
 import Characters from './components/Characters/Characters'
 import Episodes from './components/Episodes/Episodes'
 import Locations from './components/Locations/Locations'
@@ -16,8 +15,7 @@ export const App = () => {
       <Router>
         <Header />
         <Routes>
-          <Route path='/' element={<Login />} />
-          <Route path='/home' element={<Home />} />
+          <Route path='/' element={<Home />} />
           <Route path='/characters' element={<Characters />} />
           <Route path='/episodes' element={<Episodes />} />
           <Route path='/locations' element={<Locations />} />
