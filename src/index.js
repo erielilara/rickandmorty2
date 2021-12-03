@@ -4,19 +4,19 @@ import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { Provider } from 'react-redux'
-// import { PersistGate } from 'redux-persist/integration/react'
+import { PersistGate } from 'redux-persist/integration/react'
 import Store from './redux/store'
-// import { BrowserRouter as Router } from 'react-router-dom'
 
 const { persistor, store } = Store
-
-persistor.purge()
+// persistor.purge()
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
 
-      <App />
+      <PersistGate persistor={persistor}>
+        <App />
+      </PersistGate>
 
     </Provider>
   </React.StrictMode>,
