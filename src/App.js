@@ -8,6 +8,7 @@ import Episodes from './components/Episodes/Episodes'
 import Locations from './components/Locations/Locations'
 import CharacterDetails from './components/Characters/CharacterDetails/CharacterDetails'
 import LastSeen from './components/LastSeen/LastSeen'
+import About from './components/About/About'
 
 export const App = () => {
   return (
@@ -21,6 +22,7 @@ export const App = () => {
           <Route path='/locations' element={<Locations />} />
           <Route path='/details/:id' element={<CharacterDetails />} />
           <Route path='/last' element={<LastSeen />} />
+          <Route path='/about' element={<About />} />
         </Routes>
       </Router>
     </div>
